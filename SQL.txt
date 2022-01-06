@@ -1,0 +1,33 @@
+SQL automation::
+
+
+Pre Request ::
+    OJBC jar
+    Add jar in project directory
+    Add directory dependecy in pom.xml
+
+    SetPath
+        Class.forName("oracle.jdbc.driver.OracleDriver")
+    Create connection
+        Connection c = DriverManager.getConnection(hostname+ip+port+dbName,username,Password);
+        hostname = jdbc:oracle:thin:@
+        ip = 10.21.127.87
+        port = 8070
+        database = SOMUAT
+        username = SOMUSER
+        password = SOMPASSWORD
+
+    Create workbbook
+       Statement workbook =  c.creeateStatement();
+
+    Read Sheet  ==> Execute query
+        Result result = workbook.executeQuery("select * from yfs_order_line");
+
+
+    Read based on INdex
+        result.getString(1);
+
+    Read based on Header name
+        while(result.next()){
+            String price = result.getString("Retail_price");
+        }
