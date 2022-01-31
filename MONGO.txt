@@ -1,0 +1,11 @@
+MONGO DB
+
+    -- NO sql concept
+    -- search query
+    -- it doesnt have structure
+
+What it has ::
+    -- it has json format storage
+    -- we read based on collections
+        collection().read("key","value")
+    -- ooops concepts
